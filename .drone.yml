@@ -1,0 +1,18 @@
+kind: pipeline
+name: Mystic Clang
+
+steps:
+- name: Building Mystic Clang
+  image: ubuntu:bionic
+  environment: 
+    TOKED:
+      from_secret: TOKED
+    TELEGRAM_TOKEN:
+      from_secret: TELEGRAM_TOKEN
+    CHANNEL_ID:
+      from_secret: CHANNEL_ID
+
+  commands:
+    - bash clone
+    - cd build-clang
+    - bash dobuild
