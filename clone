@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 apt-get update
-apt-get install -y bison ca-certificates ccache clang cmake curl file flex gcc g++ git make ninja-build python3 texinfo zlib1g-dev libssl-dev libelf-dev patchelf zip unzip
+apt-get install -y bison ca-certificates ccache clang cmake curl file flex gcc g++ git git-lfs make ninja-build python3 texinfo zlib1g-dev libssl-dev libelf-dev patchelf zip unzip
 
 git clone --depth=1 https://"${TOKED}":x-oauth-basic@github.com/okta-10/build-clang.git -b main build-clang
