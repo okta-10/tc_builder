@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-git clone --depth=1 https://"${TOKED}":x-oauth-basic@github.com/okta-10/build-gcc.git -b main build-gcc
+git clone --depth=1 https://"${GH_TOKEN}":x-oauth-basic@github.com/okta-10/build-gcc.git -b main build-gcc
