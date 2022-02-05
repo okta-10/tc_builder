@@ -5,14 +5,18 @@ steps:
 - name: Building Mystic Clang
   image: ubuntu:bionic
   environment: 
-    TOKED:
-      from_secret: TOKED
-    TELEGRAM_TOKEN:
-      from_secret: TELEGRAM_TOKEN
-    CHANNEL_ID:
-      from_secret: CHANNEL_ID
+    GH_TOKEN:
+      from_secret: GH_TOKEN
+    GITLAB_TOKEN:
+      from_secret: GITLAB_TOKEN
+    GITLAB_USERNAME:
+      from_secret: GITLAB_USERNAME
+    TG_BOT_TOKEN:
+      from_secret: TG_BOT_TOKEN
+    TG_CHAT_ID:
+      from_secret: TG_CHAT_ID
 
   commands:
     - bash clone
     - cd build-clang
-    - bash dobuild
+    - bash dobuild.sh
